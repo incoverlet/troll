@@ -12,6 +12,7 @@ class Post(models.Model):
     def __str__(self):
         return f'[{self.pk}] {self.title}'
 
+    #url 지정해서 페이지 넘기는 함수 html에 연동 model db
     def get_absolute_url(self):
         return f'/blog/{self.pk}/'
 
